@@ -1,0 +1,68 @@
+body
+  background-color: #eeeeee
+
+@mixin breakpoint($point)
+  @if $point == xs
+    @media only screen and (max-width: 599px)
+      @content 
+  @else if $point == sm 
+    @media only screen and (min-width: 600px)  
+      @content 
+  @else if $point == md 
+    @media only screen and (min-width: 960px)   
+      @content 
+  @else if $point == lg 
+    @media only screen and (min-width: 1280px)   
+      @content 
+  @else if $point == xl 
+    @media only screen and (min-width: 1920px)   
+      @content 
+
+@mixin filter($filter-type,$filter-amount)
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})')
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})')
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})')
+  -o-filter: $filter-type+unquote('(#{$filter-amount})')
+  filter: $filter-type+unquote('(#{$filter-amount})')
+  
+  
+.IntroBox-CardMedia
+  width: 20vw
+  height: 20vh
+  +breakpoint(md)
+    width: 12vw
+    height: 50vh
+
+.Intro-title
+  padding: 20px
+  h1
+    font-size: 30px
+    
+
+.Intro-Boxs
+  overflow: hidden
+
++breakpoint(md)
+  .section
+    height: 100vh
+    .to-bottom
+      position: absolute
+      bottom: 15vh
+    .sectionBG
+      height: 100vh
+  .Intro-title
+    h1
+      font-size: 80px
+
+.section
+  margin: 10px
+
+.searchBox
+  padding: 15px
+  +breakpoint(md)
+    position: relative
+    text-align: center
+    top: 20vh
+    .InputLabel
+      font-size: 20px
+  
