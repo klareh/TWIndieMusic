@@ -11,6 +11,9 @@ import HomePage from './components/Hompage/HomePage';
 import '../css/test.sass';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import * as Scroll from 'react-scroll';
+
+
 
 const theme = createMuiTheme({
   palette: {

@@ -1,16 +1,14 @@
 import React from 'react';
 import '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
 import ResultUnit from './ResultUnit';
 
 export default props => {
   return (
     <div>
-      <section className="section">
+      <section className="section ResultBox">
       
         <Paper>
           <Grid container spacing={24} justify="flex-start" style={{ padding: 20 }}>

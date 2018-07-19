@@ -1,6 +1,5 @@
 import React from 'react';
 import '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import IntroBox from './IntroBox';
 
