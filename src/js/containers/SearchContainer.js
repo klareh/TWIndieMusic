@@ -5,8 +5,6 @@ import Scroll from 'react-scroll';
 
 const mapStateToPorps = ({ opendataReducer }) => {
   // 把全部的資料存進pops裡面
-  if(opendataReducer.show.length !== 0)
-    console.log(opendataReducer.show);
   return {
     text: opendataReducer.query,
     chips: opendataReducer.chips,
@@ -23,7 +21,7 @@ const mapDispatchToProps = dispatch => ({
     else {
       dispatch(searchInputChange(''));
       Scroll.scroller.scrollTo('ResultBox', {
-        delay: 50,
+        delay: 0,
         smooth: true,
       });
     }

@@ -9,29 +9,31 @@ export default props => {
   return (
     <div>
       <section className="section ResultBox">
-      
-        <Paper>
-          <Grid container spacing={24} justify="flex-start" style={{ padding: 20 }}>
 
-            <Grid item sm={3} xs={12} >
-              <Button variant="contained" color="primary">
-                2018/08/18
-              </Button>
+
+        {props.show.map(ele => (
+          <Paper>
+            <Grid container spacing={24} justify="flex-start" style={{ padding: 20 }}>
+              <Grid item sm={2} xs={12} justify="flex-end" style={{textAlign: 'end'}}>
+                <Button variant="contained" color="primary">
+                  {ele[0].time.split(" ")[0]}
+                </Button>
+              </Grid>
+
+              <Grid item sm={10} xs={12} >
+                {ele.map(e => (
+                  <ResultUnit
+                    city={e.location.slice(0, 2)}
+                    title={e.title}
+                    price={e.price}
+                    locationName={e.locationName}
+                  />
+                ))}
+              </Grid>
             </Grid>
+          </Paper>
+        ))}
 
-            <Grid item sm={9} xs={12} >
-              {props.show.map( e => (
-                <ResultUnit
-                city="--"
-                title={e.title}
-                price="NT$4---"
-                locationName="---"
-              />
-              ))}
-
-            </Grid>
-          </Grid>
-        </Paper>
 
         <Paper>
           <Grid container spacing={8} justify="flex-end" style={{ padding: 20 }}>

@@ -9,7 +9,7 @@ import Hidden from '@material-ui/core/Hidden';
 export default props => {
   return (
     <div>
-      <Grid container spacing={8}>
+      <Grid container spacing={8} justify="center" alignItems="center">
         <Grid item sm={1} xs={2}>
           <Chip
             label={props.city}
