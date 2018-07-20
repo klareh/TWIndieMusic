@@ -1,15 +1,20 @@
 import React from 'react';
 import '@material-ui/core/Paper';
-import Search from './Search';
-import ResultBox from './ResultBox/ResultBox';
+import { Element as SElement, } from 'react-scroll';
+import Search from '../../containers/SearchContainer';
+import ResultBox from '../../containers/ResultBoxContainer';
 import Intro from './Intro';
 
 export default props => {
   return (
     <div>
       <Intro />
-      <Search />
-      <ResultBox />
+      <SElement name="Search" >
+        <Search />
+      </SElement>
+      <SElement name="ResultBox" >
+        <ResultBox />
+      </SElement>
     </div>
   );
 };

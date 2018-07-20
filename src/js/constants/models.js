@@ -1,6 +1,8 @@
 const OpendataState = {
-  data: undefined,
-  query: undefined,
+  data: [],
+  query: '',
+  chips: [],
+  show: [],
 };
 
 export default OpendataState;

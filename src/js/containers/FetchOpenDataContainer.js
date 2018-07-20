@@ -3,7 +3,7 @@ import FetchOpenData from '../components/FetchOpenData';
 import { getOpendata } from '../actions/opendataActions';
 
 const mapStateToPorps = ({ opendataReducer }) => {
-  console.log(opendataReducer.payload);
+  //console.log(opendataReducer.payload);
 
   return {
     data: '',

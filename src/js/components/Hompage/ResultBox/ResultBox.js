@@ -20,18 +20,14 @@ export default props => {
             </Grid>
 
             <Grid item sm={9} xs={12} >
-              <ResultUnit
-                city="台北"
-                title="理想混蛋【威爾剛剛好：Well, it’s good】"
-                price="NT$400"
-                locationName="河岸留言-音樂藝文咖啡"
+              {props.show.map( e => (
+                <ResultUnit
+                city="--"
+                title={e.title}
+                price="NT$4---"
+                locationName="---"
               />
-              <ResultUnit
-                city="台北"
-                title="理想混蛋【威爾剛剛好：Well, it’s good】"
-                price="NT$400"
-                locationName="河岸留言-音樂藝文咖啡"
-              />
+              ))}
 
             </Grid>
           </Grid>

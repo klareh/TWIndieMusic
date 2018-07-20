@@ -30,6 +30,7 @@ const theme = createMuiTheme({
 render(
   <Provider store={store}>
     <div>
+    <FetchOpenDataContainer />
     <MuiThemeProvider theme={theme}>
       <AppBar />
       <HomePage/>

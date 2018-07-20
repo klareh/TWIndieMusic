@@ -5,6 +5,6 @@ import OpendataState from '../constants/models';
 
 export default createStore(
   rootReducer,
-  { opendataReducer: { payload: { ...OpendataState } } },
+  { opendataReducer: { ...OpendataState } },
   applyMiddleware(reduxThunk),
 );
