@@ -7,6 +7,8 @@ import {
   SEARCH_INPUT_ENTER,
   FILTER_DATA_SUCCESS,
   FILTER_DATA_INITIAL,
+  SHOW_FRONT_PAGE,
+  SHOW_NEXT_PAGE,
 } from '../constants/action_types';
 
 export const getOpendata = () => (
@@ -41,4 +43,12 @@ export const filterData = queries => ({
   payload: { queries: [ ...queries ] },
 });
     
-  
+export const frontPage = () => ({
+  type: SHOW_FRONT_PAGE,
+  payload: {},
+});
+
+export const nextPage = () => ({
+  type: SHOW_NEXT_PAGE,
+  payload: {},
+});
