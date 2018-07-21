@@ -6,6 +6,7 @@ import {
   FILTER_DATA_SUCCESS,
   SHOW_NEXT_PAGE,
   SHOW_FRONT_PAGE,
+  DEL_SEARCH_CHIP,
 } from '../constants/action_types';
 
 
@@ -78,12 +79,26 @@ export default (state = [], action) => {
         filterResult: [...state.filterResult],
         page: state.page,
       };
+    case DEL_SEARCH_CHIP:
+      let retChips = [...state.chips];
+      retChips.splice(retChips.lastIndexOf(action.payload.chip), 1);
+      console.log("ret",retChips);
+      return {
+        data: [...state.data],
+        query: [...state.query],
+        chips: [...retChips],
+        show: [...state.show],
+        filterResult: [...state.filterResult],
+        page: state.page,
+      };
     case FILTER_DATA_SUCCESS:
       const queries = action.payload.queries;
       const filterDat = state.data.filter(e => {
-        for (let i in queries) {
-          if (e.location != undefined && e.location.lastIndexOf(queries[i]) != -1)
-            return true
+        if(queries.length != 0) {
+          for (let i in queries) {
+            if (e.location != undefined && e.location.lastIndexOf(queries[i]) != -1)
+              return true
+          }
         }
         return false;
       });
@@ -112,7 +127,7 @@ export default (state = [], action) => {
         data: [...state.data],
         query: [...state.query],
         chips: [...state.chips],
-        show: [...rDat[0]],
+        show: (rDat.length != 0) ? [...rDat[0]] : [],
         filterResult: [...rDat],
         page: 1,
       };

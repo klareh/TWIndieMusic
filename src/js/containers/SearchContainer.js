@@ -1,6 +1,11 @@
 import { connect } from 'react-redux';
 import Search from '../components/Hompage/Search';
-import { searchInputChange, pressEnter, filterData } from  '../actions/opendataActions';
+import { 
+  searchInputChange, 
+  pressEnter, 
+  filterData,
+  deleteChips,
+} from  '../actions/opendataActions';
 import Scroll from 'react-scroll';
 
 const mapStateToPorps = ({ opendataReducer }) => {
@@ -27,8 +32,11 @@ const mapDispatchToProps = dispatch => ({
     }
   },
   onClickSubmit: queries => {
-    console.log("inclick",queries);
     dispatch(filterData(queries));
+  },
+  onClickDelete: chip => {
+    console.log("inclick",chip);
+    dispatch(deleteChips(chip));
   }
 });
 
@@ -37,6 +45,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => (
     onChangeSearchInput: dispatchProps.onChangeSearchInput,
     onEnter: dispatchProps.onEnter,
     onClickSubmit: () => dispatchProps.onClickSubmit(stateProps.chips),
+    onClickDelete: dispatchProps.onClickDelete,
   }, ownProps)
 );
 

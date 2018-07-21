@@ -36,7 +36,9 @@ export default props => {
               {props.chips.map(chip => (
                 <Chip
                   label={chip}
-                  onDelete={()=>{}}
+                  onDelete={event => {
+                    props.onClickDelete(chip);
+                  }}
                 />
               ))}
               <ScrollLink

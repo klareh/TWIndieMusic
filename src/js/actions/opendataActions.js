@@ -6,9 +6,9 @@ import {
   SEARCH_INPUT_CHANGE,
   SEARCH_INPUT_ENTER,
   FILTER_DATA_SUCCESS,
-  FILTER_DATA_INITIAL,
   SHOW_FRONT_PAGE,
   SHOW_NEXT_PAGE,
+  DEL_SEARCH_CHIP,
 } from '../constants/action_types';
 
 export const getOpendata = () => (
@@ -52,3 +52,8 @@ export const nextPage = () => ({
   type: SHOW_NEXT_PAGE,
   payload: {},
 });
+
+export const deleteChips = chip => ({
+  type: DEL_SEARCH_CHIP,
+  payload: {chip: chip},
+})
