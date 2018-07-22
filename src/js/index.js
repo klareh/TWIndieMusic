@@ -3,15 +3,10 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import AppBar from './components/AppBar';
-import SearchBarContainer from './containers/SearchBoxContainer';
 import FetchOpenDataContainer from './containers/FetchOpenDataContainer';
-import ResultListContainer from './containers/ResultListContainer';
-import ErrorHandeler from './components/ErrorHandeler';
 import HomePage from './components/Hompage/HomePage';
 import '../css/test.sass';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import * as Scroll from 'react-scroll';
 
 
 
@@ -40,9 +35,3 @@ render(
   document.getElementById('app'),
 );
 
-
-// <MuiThemeProvider2>
-// <ErrorHandeler>
-//   <ResultListContainer />
-// </ErrorHandeler>
-// </MuiThemeProvider2>
