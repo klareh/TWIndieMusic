@@ -2,11 +2,25 @@
 
 TWIndieMusic is a React App that can let user to search Taiwan's concert of indie music. All information is from Taiwan's goverment's [Indie Music's open data](https://data.gov.tw/dataset/6006) .
 
++ 使用 Redux 非同步資料流
++ 第三方資料 API 串接
++ Material-UI + SASS 規劃 RWD 網頁 
+
+## DEMO
 <img src='./src/images/Screenshot_2018-11-07 INDIE LIVE.png' />
 <img src='./src/images/Screenshot_2018-11-07 INDIE LIVE(1).png' />
 <img src='./src/images/Screenshot_2018-11-07 INDIE LIVE(2).png' />
 
-# Open Data Liscense
+## TOOLS
+| Tool             | Description   |
+| :-------------:|--------------|
+| [React](http://facebook.github.io/react/index.html) | |
+| [Material-UI](https://github.com/mui-org/material-ui) | |
+| [SASS](http://sass-lang.com/) |  |
+| [Babel](https://babeljs.io/) | |
+| [webpack](https://github.com/webpack/webpack) | |
+
+## Open Data Liscense
 Data Providing from Ministry of Culture, Taiwan (R.O.C.) 2018 Indie Music
 The Open Data is made available to the public under the Open Government Data License, User can make use of it when complying to the condition and obligation of its terms.
 Open Government Data License:https://data.gov.tw/license
