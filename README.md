@@ -1,7 +1,10 @@
 # TWIndieMusic 台灣硬地音樂搜尋器
 
+台灣硬地音樂搜尋器為一 React 網頁應用，使用者可以在上面搜尋台灣獨立音樂的演出。所有資訊來源為台灣政府的文化部開源資料，詳情請見最底下的開源資料授權。
+
 TWIndieMusic is a React App that can let user to search Taiwan's concert of indie music. All information is from Taiwan's goverment's [Indie Music's open data](https://data.gov.tw/dataset/6006) .
 
+### 技術特色
 + 使用 Redux 非同步資料流
 + 第三方資料 API 串接
 + Material-UI + SASS 規劃 RWD 網頁 
