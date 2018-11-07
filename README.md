@@ -20,6 +20,17 @@ TWIndieMusic is a React App that can let user to search Taiwan's concert of indi
 | [Babel](https://babeljs.io/) | |
 | [webpack](https://github.com/webpack/webpack) | |
 
+## Installation
+
+If you dont have node.js, please install it from: the official page of [node.js](https://nodejs.org/en/)
+
+```console
+$ git clone https://github.com/klareh/TWIndieMusic.git  ## Clone the repo
+$ cd TWIndieMusic
+$ npm install ## install required module
+$ npm start   ## Then it will open the browser at: http://localhost:8080
+```
+
 ## Open Data Liscense
 Data Providing from Ministry of Culture, Taiwan (R.O.C.) 2018 Indie Music
 The Open Data is made available to the public under the Open Government Data License, User can make use of it when complying to the condition and obligation of its terms.
