@@ -10,6 +10,8 @@ TWIndieMusic is a React App that can let user to search Taiwan's concert of indi
 + Material-UI + SASS 規劃 RWD 網頁 
 
 ## 展示 DEMO
+[**live demo**](https://klareh.github.io/TWIndieMusic/)
+
 <img src='./src/images/Screenshot_2018-11-07 INDIE LIVE.png' />
 <img src='./src/images/Screenshot_2018-11-07 INDIE LIVE(1).png' />
 <img src='./src/images/Screenshot_2018-11-07 INDIE LIVE(2).png' />
