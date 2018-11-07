@@ -92,8 +92,10 @@ export default (state = [], action) => {
         page: state.page,
       };
     case FILTER_DATA_SUCCESS:
+      
       const queries = action.payload.queries;
       const filterDat = state.data.filter(e => {
+        if(queries.length === 0) return true;
         if(queries.length != 0) {
           for (let i in queries) {
             if (e.location != undefined && e.location.lastIndexOf(queries[i]) != -1)
@@ -121,7 +123,7 @@ export default (state = [], action) => {
         tmp = t;
         cnt++;
       });
-
+      console.log(rDat);
 
       return {
         data: [...state.data],

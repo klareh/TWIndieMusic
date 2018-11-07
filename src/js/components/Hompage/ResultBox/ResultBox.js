@@ -6,56 +6,63 @@ import Grid from '@material-ui/core/Grid';
 import ResultUnit from './ResultUnit';
 import ListItem from '@material-ui/core/ListItem';
 
-export default props => {
-  return (
-    <div>
-      <section className="section ResultBox">
+class ResultBox extends React.Component {
+    render() {
+        let props = this.props;
+        return (
+            <div>
+                <section className="section ResultBox">
+                    {this.getResultOfDay()}
+                    <Paper>
+                        <Grid container spacing={8}
+                            justify="flex-end"
+                            style={{ padding: 20 }}>
+                            <Grid item md={1} sm={2} xs={4} >
+                                <Button onClick={props.onClickNext}>
+                                    Next
+                                </Button>
+                            </Grid>
+                            <Grid item lg={1} sm={2} xs={4} >
+                                <Button onClick={props.onClickFront}>
+                                    Front
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </Paper>
 
+                </section>
+            </div>
+        );
+    }
 
-        {props.show.map(ele => (
-          <Paper>
-            <Grid container spacing={24} justify="flex-start" style={{ padding: 20 }}>
-              <Grid item md={2} sm={3} xs={12} style={{textAlign: 'end'}}>
-              <ListItem >
-                <Button variant="contained" color="primary">
-                  {ele[0].time.split(" ")[0]}
-                </Button>
-              </ListItem>
-              </Grid>
+    getResultOfDay() {
+        return this.props.show.map((resultOfThePage, i) => (
+            <Paper key={i}>
+                <Grid container spacing={24} justify="flex-start" style={{ padding: 20 }}>
+                    <Grid item md={2} sm={3} xs={12} style={{ textAlign: 'end' }}>
+                        <ListItem >
+                            <Button variant="contained" color="primary">
+                                {resultOfThePage[0].time.split(" ")[0]}
+                            </Button>
+                        </ListItem>
+                    </Grid>
+                    <Grid item sm={10} sm={9} xs={12} >
+                        {this.getResultUnit(resultOfThePage)}
+                    </Grid>
+                </Grid>
+            </Paper>
+        ))
+    }
 
-              <Grid item sm={10} sm={9} xs={12} >
-                {ele.map(e => (
-                  <ResultUnit
-                    city={e.location.slice(0, 2)}
-                    title={e.title}
-                    price={e.price}
-                    locationName={e.locationName}
-                  />
-                ))}
-              </Grid>
-            </Grid>
-          </Paper>
-        ))}
-
-
-        <Paper>
-          <Grid container spacing={8} justify="flex-end" style={{ padding: 20 }}>
-
-            <Grid item md={1} sm={2} xs={4} >
-              <Button onClick={props.onClickNext}>
-                Next
-              </Button>
-            </Grid>
-            <Grid item lg={1} sm={2} xs={4} >
-              <Button onClick={props.onClickFront}>
-                Front
-              </Button>
-            </Grid>
-
-          </Grid>
-        </Paper>
-
-      </section>
-    </div>
-  );
+    getResultUnit(resultOfThePage) {
+        return resultOfThePage.map(e => (
+            <ResultUnit key={e.uid}
+                city={e.location.slice(0, 2)}
+                title={e.title}
+                price={e.price}
+                locationName={e.locationName} />
+        ));
+    }
 };
+
+export default ResultBox;

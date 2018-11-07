@@ -9,9 +9,10 @@ import {
 import Scroll from 'react-scroll';
 
 const mapStateToPorps = ({ opendataReducer }) => {
-  // 把全部的資料存進pops裡面
+  // 把全部的資料存進props裡面
+  console.log('in map=>>>',opendataReducer.query);
   return {
-    text: opendataReducer.query,
+    text: (opendataReducer.query) ? opendataReducer.query : '',
     chips: opendataReducer.chips,
   }
 };

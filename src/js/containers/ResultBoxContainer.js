@@ -9,10 +9,10 @@ const mapStateToPorps = ({ opendataReducer }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  onClickNext: event => {
+  onClickNext: () => {
     dispatch(nextPage());
   },
-  onClickFront: event => {
+  onClickFront: () => {
     dispatch(frontPage());
   }
 });

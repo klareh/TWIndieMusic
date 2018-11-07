@@ -17,7 +17,7 @@ export const getOpendata = () => (
     fetch('https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=5')
       .then(response => (response.json()))
       .then((json) => {
-        console.log(json);
+        // console.log(json);
         dispatch({
           type: GET_OPENDATA_SUCCESS,
           payload: { data: json },

@@ -8,56 +8,54 @@ import Button from '@material-ui/core/Button';
 import Chip from '@material-ui/core/Chip';
 import { Link as ScrollLink } from 'react-scroll';
 
-export default props => {
-  return (
-    <div>
-        <section className="section Search" >
-          <CardMedia
-            image={require('../../../../images/bgImg.jpg')}
-            className="sectionBG"
-          >
-            <div className="searchBox">
-              <FormControl>
-                <InputLabel>
-                  想找哪邊的呢？
-                </InputLabel>
-                <Input
-                  onKeyDown={event => {
-                    if (event.keyCode === 13) {
-                      props.onEnter(event);
-                      props.onClickSubmit(event);
-                    }
-                  }}
-                  onChange={props.onChangeSearchInput}
-                  value={props.text}
-                />
-
-              </FormControl>
-              {props.chips.map(chip => (
-                <Chip
-                  label={chip}
-                  onDelete={event => {
-                    props.onClickDelete(chip);
-                  }}
-                />
-              ))}
-              <ScrollLink
-                to="ResultBox"
-                spy={true}
-                smooth={true}
-                duration={500} >
-                <Button color="inherit"
-                  onClick={props.onClickSubmit}
-                >
-                  Enter
-                  </Button>
-              </ScrollLink>
+class Search extends React.Component {
+    render() {
+        let props = this.props;
+        return (
+            <div>
+                <section className="section Search" >
+                    <CardMedia className="sectionBG"
+                        image={require('../../../../images/bgImg.jpg')}>
+                        <div className="searchBox">
+                            <FormControl>
+                                <InputLabel>請輸入城市名稱</InputLabel>
+                                <Input
+                                    onKeyDown={event => this.onKeyDown(event)}
+                                    onChange={props.onChangeSearchInput}
+                                    value={props.text} />
+                            </FormControl>
+                            {this.getQueryChips()}
+                            <ScrollLink
+                                to="ResultBox"
+                                spy={true}
+                                smooth={true}
+                                duration={500} >
+                                <Button color="inherit" onClick={props.onClickSubmit}>
+                                    Enter
+                                </Button>
+                            </ScrollLink>
+                        </div>
+                    </CardMedia>
+                </section>
             </div>
+        );
+    }
 
-          </CardMedia>
+    onKeyDown(event) {
+        if (event.keyCode === 13) {
+            this.props.onEnter(event);
+            this.props.onClickSubmit(event);
+        }
+    }
 
-        </section>
-    </div>
-  );
-};
+    getQueryChips() {
+        return this.props.chips.map((chip, i) => (
+            <Chip label={chip} key={i}
+                onDelete={() => this.props.onClickDelete(chip)} />
+        ));
+    }
+}
+
+
+export default Search;
 
