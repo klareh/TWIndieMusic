@@ -9,12 +9,12 @@ TWIndieMusic is a React App that can let user to search Taiwan's concert of indi
 + 第三方資料 API 串接
 + Material-UI + SASS 規劃 RWD 網頁 
 
-## DEMO
+## 展示 DEMO
 <img src='./src/images/Screenshot_2018-11-07 INDIE LIVE.png' />
 <img src='./src/images/Screenshot_2018-11-07 INDIE LIVE(1).png' />
 <img src='./src/images/Screenshot_2018-11-07 INDIE LIVE(2).png' />
 
-## TOOLS
+## 工具 TOOLS
 | Tool             | Description   |
 | :-------------:|--------------|
 | [React](http://facebook.github.io/react/index.html) | 實現前端界面主要框架 |
@@ -23,9 +23,10 @@ TWIndieMusic is a React App that can let user to search Taiwan's concert of indi
 | [Babel](https://babeljs.io/) | 在本專案主要使用 ECMAScript 6 語法 |
 | [webpack](https://github.com/webpack/webpack) | 強大的開發環境包，用來管理模組以及方便分檔以利維護 |
 
-## Installation
+## 安裝 Installation
 
-If you dont have node.js, please install it from: the official page of [node.js](https://nodejs.org/en/)
+如果你沒有安裝 node.js, 請先至 [node.js](https://nodejs.org/en/) 官方網站下載。
+If you dont have node.js, please install it from the [official page](https://nodejs.org/en/) .
 
 ```console
 $ git clone https://github.com/klareh/TWIndieMusic.git  ## Clone the repo
