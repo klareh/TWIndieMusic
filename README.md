@@ -17,11 +17,11 @@ TWIndieMusic is a React App that can let user to search Taiwan's concert of indi
 ## TOOLS
 | Tool             | Description   |
 | :-------------:|--------------|
-| [React](http://facebook.github.io/react/index.html) | |
-| [Material-UI](https://github.com/mui-org/material-ui) | |
-| [SASS](http://sass-lang.com/) |  |
-| [Babel](https://babeljs.io/) | |
-| [webpack](https://github.com/webpack/webpack) | |
+| [React](http://facebook.github.io/react/index.html) | 實現前端界面主要框架 |
+| [Material-UI](https://github.com/mui-org/material-ui) | Mmaterial design 風格的 React 元件庫 |
+| [SASS](http://sass-lang.com/) | CSS 前處理語言 |
+| [Babel](https://babeljs.io/) | 在本專案主要使用 ECMAScript 6 語法 |
+| [webpack](https://github.com/webpack/webpack) | 強大的開發環境包，用來管理模組以及方便分檔以利維護 |
 
 ## Installation
 
